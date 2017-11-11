@@ -1,9 +1,8 @@
-
-
-
 {
-  "name": "",
-  "version": "",
+  "name": "themoviedb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "dependencies": {
     "angular": "^1.6.6",
     "bootstrap": "^3.3.7",
@@ -11,5 +10,20 @@
     "mongoose": "^4.13.0",
     "nodemon": "^1.12.1",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnny1993mh/themoviesdb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnny1993mh/themoviesdb/issues"
+  },
+  "homepage": "https://github.com/johnny1993mh/themoviesdb#readme"
 }
