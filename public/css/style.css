@@ -1,0 +1,21 @@
+h1{
+    color:#01d277;
+    margin-top: 0;
+}
+.uno {
+    margin: 20px 0;
+}
+
+.container-fluid{
+    background-color: black;
+}
+
+.col-md-4 {
+    width:30%;
+    padding: 0;
+    margin: 15px;
+}
+.col-md-4 {
+    text-align: center;
+    min-height: 900px;
+}

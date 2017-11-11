@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>THE MOVIE DB</title>
+    <base href="/">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-app="app">
+    <div class="container">
+        <div ng-include = "'../app/UI/nav.template.html'"></div>
+            <div ng-controller="FilmCtrl">
+                <!-- <div ng-repeat="film in films">
+                    <p ng-bind="film.title"></p>
+                </div> -->
+                <div class="row">
+                    <div class="panel panel-default col-md-4"  ng-repeat="film in films">
+                        <div class="panel-heading">
+                            <h1 ng-bind="film.title"></h1>
+                        </div>
+                        <div class="panel-body">
+                            <img style="max-width:80%;" ng-src="https://image.tmdb.org/t/p/w500/{{film.poster_path}}">
+                            <p ng-bind="film.overview"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+        
+
+</body>
+<script src="angular/angular.min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/app.controller.js"></script>
+<script src="app/app.service.js"></script>
+<script scr="bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+</html>
