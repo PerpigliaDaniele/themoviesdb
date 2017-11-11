@@ -13,7 +13,6 @@ module.exports = function (app, express) {
     });
 
     app.use('/api/films', require('./films'));
-    app.use('/api/tvs', require('./tvs'));
     app.use('/api/generi', require('./generi'));
 
     app.get('/*', (req, res) => {
