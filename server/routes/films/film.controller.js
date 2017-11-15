@@ -41,7 +41,10 @@ module.exports = function(){
 //-----------Aggiunto nuovo Film----------------------
 
     var insertOne = function(req,res){
+        console.log(res.data);
+        console.log(req.data);
         var nuovoFilm = new Film (req.body);
+        console.log(nuovoFilm);
         nuovoFilm.save()
         .then(function (data) {
             res.status(200).json(data);

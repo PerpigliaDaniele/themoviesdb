@@ -1,18 +1,76 @@
-<div class="container-fluid">
-        <div class="row uno">
-            <div class="col-md-2">
-                <img src="images/primary-green.svg" width="50px">
-            </div>
-            <div class="col-md-10">
-                <h1>THE MOVIE DB</h1>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row uno">
-            <div class="col-md-2">
-                <button class="btn btn-primary" onclick="alert('you clicked me')">click me</button>
-            </div>
-        </div>
-    </div>
-</div>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">The Movies DB</a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Film</a></li>
+          <li><a href="#">Serie TV</a></li>
+          
+         
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inserisci un nuovo film <span class="caret"></span></a>
+            <ul class="dropdown-menu" ng-controller="FilmCtrl">
+              <form novalidate class="simple-form">
+                <div class=form-group-sm>
+                 <input type="text" ng-model="newFilm.title" placeholder="Titolo"  class="form-control"/><br />
+                <input type="text" ng-model="newFilm.poster_path" placeholder="Poster Path"  class="form-control"/><br />
+                <input type="text" ng-model="newFilm.original_language" placeholder="Original Language"  class="form-control"/><br />
+                <input type="text" ng-model="newFilm.genre_ids" placeholder="Genre Ids"  class="form-control"/><br />
+                <input type="date" ng-model=newFilm.release_date placeholder="Data Realizzazione" class=form-control /><br />
+                <textarea ng-model=newFilm.overview placeholder="OverView" class=form-control></textarea><br /></div>
+                <input type="button" ng-click="reset()" value="Reset" />
+                <input type="submit" ng-click="update(newFilm)" value="Save" />
+                <pre>user = {{newFilm | json}}</pre>
+               
+              </form>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!--
+    
+    
+{
+"_id": "59fae7a2b0ac6d3c5e42ceca",
+"id": "59fae7a2b0ac6d3c5e42ceca",
+"title": "It",
+"poster_path": "/cq8vE6yGU02PHfuS3O5nQ5f1Obk.jpg",
+"original_language": "en",
+"original_title": "It",
+"backdrop_path": "/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg",
+"overview": "Quando iniziano a scomparire i ragazzi di Derry, Maine, un gruppo di bambini si trova faccia a faccia con le proprie paure, facendo quadrato contro un clown maligno chiamato Pennywise, la cui storia è costellata da secoli di omicidi e violenze.",
+"release_date": "2017-09-05T00:00:00.000Z",
+"adult": false,
+"genre_ids": [
+18,
+27,
+53
+],
+"popularity": 824.234625,
+"vote_average": 8,
+"video": false,
+"vote_count": 3173,
+"genre": null
+}
+  -->

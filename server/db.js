@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://mouad:13021993@ds013559.mlab.com:13559/themoviesdb',
+mongoose.connect('mongodb://mouad2:130293@ds013559.mlab.com:13559/themoviesdb',
 
 {useMongoClient: true},
 

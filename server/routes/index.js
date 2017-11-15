@@ -7,7 +7,9 @@ module.exports = function (app, express) {
     app.use('/images', express.static(path.join(__dirname, '..', '..', 'public', 'images')));
     app.use('/css', express.static(path.join(__dirname, '..', '..', 'public', 'css')));
     app.use('/app', express.static(path.join(__dirname, '..', '..', 'app')));
-
+    app.use('/jquery', express.static(path.join(__dirname, '..', '..','node_modules','jquery')));
+    app.use('/angular-jk-rating-stars', express.static(path.join(__dirname, '..', '..','node_modules','angular-jk-rating-stars')));
+    
     app.get('/', (req, res) => {
         res.sendFile(path.join(__dirname, '..', '..', 'public', 'index.html'));
     });

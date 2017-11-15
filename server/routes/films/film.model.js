@@ -41,6 +41,7 @@ var filmSchema = new Schema({
     genre_ids:[{
         type:Number,
         required: true
+
     }],
     backdrop_path:{
         type: String
@@ -55,7 +56,7 @@ var filmSchema = new Schema({
     },
     release_date:{
         type: Date,
-        required: true
+       // required: true
     }
 
 
