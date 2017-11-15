@@ -10,7 +10,8 @@
     "jquery": "^3.2.1",
     "mongoose": "^4.13.0",
     "nodemon": "^1.12.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "angular-ui-router":"1.0.0"
   },
   "devDependencies": {},
   "scripts": {

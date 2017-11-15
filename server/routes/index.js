@@ -9,6 +9,8 @@ module.exports = function (app, express) {
     app.use('/app', express.static(path.join(__dirname, '..', '..', 'app')));
     app.use('/jquery', express.static(path.join(__dirname, '..', '..','node_modules','jquery')));
     app.use('/angular-jk-rating-stars', express.static(path.join(__dirname, '..', '..','node_modules','angular-jk-rating-stars')));
+    app.use('/angular-ui-router', express.static(path.join(__dirname, '..', '..','node_modules','angular-ui-router')));
+    
     
     app.get('/', (req, res) => {
         res.sendFile(path.join(__dirname, '..', '..', 'public', 'index.html'));

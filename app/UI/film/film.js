@@ -1,1 +1,1 @@
-angular.module('app',['jkAngularRatingStars']);
+//angular.module('app',['jkAngularRatingStars']);

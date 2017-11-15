@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>THE MOVIE DB</title>
-    <base href="/">
+    <base href="/"></base>
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
     <link href="../node_modules/angular-jk-rating-stars/dist/jk-rating-stars.css" rel="stylesheet" type="text/css" />
     
@@ -15,81 +15,50 @@
 </head>
 
 <body ng-app="app">
-    <div class="container-fluid" >
-        <div ng-include = "'../app/UI/nav.template.html'"></div>
-            <div>
-               
-                <div class="row">
-                    <br>
-                    <div ng-controller="FilmCtrl">
-                        <input class=inpt type="text" class="form-control" placeholder="Search" ng-model="search.name">
-                        
-                        <div class='col-md-2'>
-                            <p id=tit>Film più popolari:</p>
-                            <ul class='list-group' ng-repeat="film in films | filter:search.name:strict">
-                                <li ng-click='click(film)' class='list-group-item' ng-bind=film.title href=#></li>
-                            </ul>
-                        </div> 
-                        <div class='col-md-8'>
-                            <div class='panel'>
-                               
-                                <div id=panelbd class=panel-body>
-                                 
-                                        <div class='col-md-6 '>
-                                            <img id=thumb ng-src="https://image.tmdb.org/t/p/w500/{{poster_path}}">
+   <div ui-view='menu'>
 
-                                        </div>
-                                        <div class='col-md-6'>
-                                            <h3 id=title>{{title}}</h3>
-                                            <p >Language:  {{lang}}</p>
-                                          
-                                         
-                                            <jk-rating-stars class=my-custom-stars min-rating=0 max-rating="9" rating="secondRate" on-rating="onItemRating(rating)"></jk-rating-stars>
-                                            <div>{{secondRate}} Stars</div>
-                                        
-                                            <p>Popularity: {{popularity}}</p>
-                                        
-                                            <p id=overView>{{overview}}</p><br><br><br><br><br><br><br>
-                                            <p>In tutte le sale a partire dal: {{release_date}}</p>
-                                        </div>
-                                 
-                                </div>
-                            </div>
-                        </div>
-                    </div>                   
-                 
-                    <div class='col-md-1' ng-controller="GenreCtrl">
-                        <h5>Generi:</h5>
-                        <ul class=ul   ng-repeat="genre in genres">
-                            <h6  ng-bind='genre.name'></h6>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+   </div>
+   <div ui-view='content'>
 
-    </div>
-
-    <!--
-"genre_ids": [4 items],
-"popularity": 638.120041,
-"vote_average": 6.4,
-"video": false,
-"vote_count": 4890,
-"genre": null -->
-        
+   </div>
 
 </body>
 <script src="angular/angular.min.js"></script>
-<script src="app/UI/film/film.js"></script>
+<script src="angular-ui-router/release/angular-ui-router.js"></script>
+<script src="app/app.js"></script>
+<script src='app/routes/routes.js'></script>
 <script src="app/UI/film/film.controller.js"></script>
 <script src="app/UI/film/film.service.js"></script>
 <script src='app/UI/generi/generi.js'></script>
 <script src='app/UI/generi/generi.service.js'></script>
 <script src='app/UI/generi/generi.controller.js'></script>
 <script src="jquery/dist/jquery.js"></script>
-<script src="bootstrap/dist/js/bootstrap.min.js"></script>-->
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="angular-jk-rating-stars/dist/jk-rating-stars.js"></script>
 
-
-
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
